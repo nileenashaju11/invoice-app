@@ -1,0 +1,63 @@
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.hidden_field :user_id, value: current_user.id%>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :project_name %>
+        <%= form.text_field :project_name, class: "form-control rounded-0" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :client_name %>
+        <%= form.text_field :client_name, class: "form-control rounded-0" %>
+      </div>      
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :developer %>
+        <%= form.text_field :developer, class: "form-control rounded-0" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :start_date %>
+        <%= form.date_field :start_date, class: "form-control rounded-0" %>
+      </div>      
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :working_hours %>
+        <%= form.number_field :working_hours, class: "form-control rounded-0" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :payment_date %>
+        <%= form.date_field :payment_date, class: "form-control rounded-0" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-sm btn-primary mt-3 rounded-0" %>
+  </div>
+<% end %>

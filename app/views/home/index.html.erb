@@ -1,0 +1,63 @@
+<header>
+	<div class="container"> 
+		<div class="row mt-5">
+			<div class="col-md-6">
+				<%= column_chart [{
+			    name: "Project", 
+			    data: [["2010", 10], ["2030", 28]]
+				  },
+				  {
+				    name: "Hours", 
+				    data: [["2010", 24], ["2030", 19]]
+				  },
+				  {
+				    name: "Bill", 
+				    data: [["2010", 20], ["2030", 29]]
+				  }] 
+				%>			
+				<p class="text-center"><b>Weekly Project Revenue</b></p>
+			</div>
+			<div class="col-md-6">
+				<%= bar_chart [{
+			    name: "Project", 
+			    data: [["2010", 10], ["2020", 16], ["2030", 28]]
+				  },
+				  {
+				    name: "Hours", 
+				    data: [["2010", 24], ["2020", 22], ["2030", 19]]
+				  },
+				  {
+				    name: "Bill", 
+				    data: [["2010", 20], ["2020", 23], ["2030", 29]]
+				  }] 
+				%>	
+				<p class="text-center"><b>Invoice generated per month</b></p>		
+			</div>
+		</div>	
+		<div class="row mt-3">
+			<div class="col-md-12">
+				<%= pie_chart [["Project", 10],["Bill", 20], ["Hours", 30]] %>	
+				<p class="text-center"><b>Yearly project revenue</b></p>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-md-12">
+				<%= bar_chart [{
+			    name: "Project", 
+			    data: [["2010", 10], ["2020", 16], ["2030", 28]]
+				  },
+				  {
+				    name: "Hours", 
+				    data: [["2010", 24], ["2020", 22], ["2030", 19]]
+				  },
+				  {
+				    name: "Bill", 
+				    data: [["2010", 20], ["2020", 23], ["2030", 29]]
+				  }] 
+					%>	
+				<p class="text-center"><b>Monthly project revenue</b></p>		
+			</div>
+		</div>
+	</div> 
+
+</header>

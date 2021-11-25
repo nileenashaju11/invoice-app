@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="card mt-5">
+		<div class="card-header">
+			<h1>Editing Project</h1>
+		</div>
+		<div class="card-body">
+			<%= render 'form', project: @project %>
+
+			<%= link_to 'Show', @project, class: "btn btn-sm btn-primary mt-3 rounded-0" %> 
+			<%= link_to 'Back', projects_path, class: "btn btn-sm btn-primary mt-3 rounded-0" %>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <strong>Project name:</strong>
+        <%= @project.project_name %>
+      </p>
+
+      <p>
+        <strong>Client name:</strong>
+        <%= @project.client_name %>
+      </p>
+
+      <p>
+        <strong>Developer:</strong>
+        <%= @project.developer %>
+      </p>
+
+      <p>
+        <strong>Start date:</strong>
+        <%= @project.start_date %>
+      </p>
+
+      <p>
+        <strong>Working hours:</strong>
+        <%= @project.working_hours %>
+      </p>
+
+      <p>
+        <strong>Project status:</strong>
+        <%= @project.project_status %>
+      </p>
+
+      <p>
+        <strong>Payment date:</strong>
+        <%= @project.payment_date %>
+      </p>
+
+      <p>
+        <strong>Invoice status:</strong>
+        <%= @project.invoice_status %>
+      </p>
+
+      <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-sm btn-primary rounded-0" %> |
+      <%= link_to 'Back', projects_path, class: "btn btn-sm btn-primary rounded-0" %>
+    </div>
+  </div>
+</div>

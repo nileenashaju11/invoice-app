@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  billable_hours: 1
+  hourly_rate: 1
+  total_billable_hours: MyString
+  project: one
+
+two:
+  billable_hours: 1
+  hourly_rate: 1
+  total_billable_hours: MyString
+  project: two
